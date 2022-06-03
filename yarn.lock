@@ -3033,6 +3033,11 @@
     "path-browserify" "^1.0.0"
     "url-parse" "^1.5.9"
 
+"expo-clipboard@~3.0.1":
+  "integrity" "sha512-y3gooHxfXpdlslS8GLTrXdWKGCr5hXLI+Y49PolbjUqBVh819+Z/T8bdskUf5YNxu/Bb0HG1yuHpHPe8XyvxSA=="
+  "resolved" "https://registry.npmjs.org/expo-clipboard/-/expo-clipboard-3.0.1.tgz"
+  "version" "3.0.1"
+
 "expo-constants@~13.1.1":
   "integrity" "sha512-QRVHrrMCLenBzWZ8M+EvCXM+jjdQzFMW27YQHRac3SGGoND1hWr81scOmGwlFo2wLZrYXm8HcYt1E6ry3IIwrA=="
   "resolved" "https://registry.npmjs.org/expo-constants/-/expo-constants-13.1.1.tgz"
@@ -5341,7 +5346,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@*", "prop-types@^15.6.0":
+"prop-types@*", "prop-types@^15.5.10", "prop-types@^15.6.0":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -5445,6 +5450,20 @@
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz"
   "version" "0.0.6"
 
+"react-native-root-siblings@^4.0.0", "react-native-root-siblings@^4.1.1":
+  "integrity" "sha512-sdmLElNs5PDWqmZmj4/aNH4anyxreaPm61c4ZkRiR8SO/GzLg6KjAbb0e17RmMdnBdD0AIQbS38h/l55YKN4ZA=="
+  "resolved" "https://registry.npmjs.org/react-native-root-siblings/-/react-native-root-siblings-4.1.1.tgz"
+  "version" "4.1.1"
+
+"react-native-root-toast@^3.4.0":
+  "integrity" "sha512-2jv9XG9tK0rbXkD3IaO/clSJJQYXRnOCnGliZnYP/Z6I3u2QtdOp5xQ/ni8BbLqpPwSeKfCuO7R9H6iHuAN+Ig=="
+  "resolved" "https://registry.npmjs.org/react-native-root-toast/-/react-native-root-toast-3.4.0.tgz"
+  "version" "3.4.0"
+  dependencies:
+    "deprecated-react-native-prop-types" "^2.3.0"
+    "prop-types" "^15.5.10"
+    "react-native-root-siblings" "^4.0.0"
+
 "react-native-web@0.17.7":
   "integrity" "sha512-4OOU/QjyRySOXyHfTvljEMS4VXKn42Qs3y9uHDPMwaCUFjwg0oasR/j706OaVgan9kF4Ipa2vJ3F6Z/Xqy8KeQ=="
   "resolved" "https://registry.npmjs.org/react-native-web/-/react-native-web-0.17.7.tgz"
@@ -5458,7 +5477,7 @@
     "normalize-css-color" "^1.0.2"
     "prop-types" "^15.6.0"
 
-"react-native@*", "react-native@>=0.59", "react-native@0.68.2":
+"react-native@*", "react-native@>=0.47.0", "react-native@>=0.59", "react-native@0.68.2":
   "integrity" "sha512-qNMz+mdIirCEmlrhapAtAG+SWVx6MAiSfCbFNhfHqiqu1xw1OKXdzIrjaBEPihRC2pcORCoCHduHGQe/Pz9Yuw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.68.2.tgz"
   "version" "0.68.2"
