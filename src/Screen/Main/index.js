@@ -15,6 +15,7 @@ const wait = (timeout) => {
 }
 export default function index() {
     const [macAddress, setMacAddress] = useState()
+    const [iosMacAddress, setIosMacAddress] = useState()
     const [vendor, setVendor] = useState()
     const [brand, setBrand] = useState()
     const [model, setModel] = useState()
@@ -52,6 +53,11 @@ export default function index() {
                 setMacAddress(Application.androidId)
             }
             else {
+                Network.getMacAddressAsync()
+                    .then((macAddress) => {
+                        setIosMacAddress(macAddress)
+                    })
+                    .catch((error) => console.log(error));
                 await Application.getIosIdForVendorAsync().then((res) => {
                     setMacAddress(res)
                 })
@@ -150,7 +156,7 @@ export default function index() {
                 <View>
                     <TouchableOpacity onPress={() => { copyText(bssid) }}>
                         <View style={styles.macAddressBox}>
-                            <Text style={styles.macText}>{bssid}</Text>
+                            <Text style={styles.macText}>{Device.osName == 'Android' ? bssid : iosMacAddress}</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -180,7 +186,7 @@ export default function index() {
 const styles = StyleSheet.create({
     header: {
         backgroundColor: "#1C4E71",
-        marginTop: 25,
+        marginTop: Device.osName == 'Android' ? 25 : 35,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
