@@ -53,18 +53,16 @@ export default function index() {
                 setMacAddress(Application.androidId)
             }
             else {
-                Network.getMacAddressAsync()
+                await Network.getMacAddressAsync()
                     .then((macAddress) => {
                         setIosMacAddress(macAddress)
                     })
                     .catch((error) => console.log(error));
-                await Application.getIosIdForVendorAsync().then((res) => {
-                    setMacAddress(res)
-                })
+               
             }
         }
         macAddress()
-    }, [macAddress])
+    }, [refreshing])
     const data = [
         {
             name: "Vendor",
@@ -126,6 +124,7 @@ export default function index() {
             alert(error.message);
         }
     };
+    console.log(bssid);
     return (
         <View style={{ flex: 1 }}>
             <StatusBar style="auto" />
